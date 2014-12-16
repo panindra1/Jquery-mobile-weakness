@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<div class="ui-grid-b">
+    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/Exercise.jpg"> Anchor</a></div>
+    <div class="ui-block-b"><a href="tv.html" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"> Anchor</a></div>
+</div>
+
+<div class="ui-grid-b">
+    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/procastination.jpg">Anchor</a></div>
+    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/pessimism.jpg"> Anchor</a></div>
+</div>
+
+
+</body>
+</html>
