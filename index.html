@@ -11,47 +11,113 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 </head>
 
 <body>
-<div data-url="demo-page1" data-role="page" id="demo-page">
+<!----welcome page -->
+<div data-url="welcome-page" data-role="page" id="welcome-page">
 
 	<div data-role="header">
-		<h1>Two</h1>
+		<h1>Welcome</h1>
+	</div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <label for="text-basic">Welcome to weakness Analyzer!</label>
+	<label for="text-basic">Enter you Name:</label>
+	<input name="text-basic" id="test-input" value="" type="text"></div>
+	<a href="#grid-page" class="ui-shadow ui-btn ui-corner-all">Enter!</a>
+    </div>
+
+<!--- grid page -->
+
+<div data-url="grid-page" data-role="page" id="grid-page">
+
+	<div data-role="header">
+		<h1>Select weakness</h1>
 	</div><!-- /header -->
     <div role="main" class="ui-content">
   	<div class="ui-grid-a">
-	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/Exercise.jpg"> Anchor</a></div>
-	    <div class="ui-block-b"><a href="#two" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"> Anchor</a></div>
+	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/Exercise.jpg"></a> Excersise</div>
+           
+	    <div class="ui-block-b"><a href="#one" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"></a> TV</div>
 	</div>
 
 	<div class="ui-grid-a">
-	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/procastination.jpg">Anchor</a></div>
-	    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/pessimism.jpg"> Anchor</a></div>
+	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/procastination.jpg"></a>Procrastination</div>
+	    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/pessimism.jpg"></a> Pessimism</div>
 	</div>
 </div>
 </div>
 
-<div data-url="demo-page" data-role="page" id="demo-page">
+    <!-- Start of first page: #one -->
+<div data-url="demo-page" data-role="page" id="one">
     <div data-role="header" data-theme="b">
         <h1>Swipe left or right</h1>
      
-        <a href="#right-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
+        <a href="#left-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <dl>
+	
+<div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#Mon" data-ajax="false">M</a></li>
+      <li><a href="#Tue" data-ajax="false">Tu</a></li>
+      <li><a href="#Wed" data-ajax="false">W</a></li>
+      <li><a href="#Thu" data-ajax="false">T</a></li>
+      <li><a href="#Fri" data-ajax="false">F</a></li>
+      <li><a href="#Sat" data-ajax="false">S</a></li>
+    </ul>
+  </div>
+
+  <div id="Mon" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+  <div id="Tue">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+  </div>
+
+  <div id="Wed" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+
+   <div id="Thu" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+
+   <div id="Fri" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+
+ <div id="Sat" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+
+</div>        
+	<dl>
             <dt>Swipe <span>verb</span></dt>
-            <dd><b>1.</b> to strike or move with a sweeping motion</dd>
         </dl>
+
 	<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
-	<p><a href="#popup" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>
+
+	
+
+
     </div><!-- /content -->
 
     <div data-role="panel" id="left-panel" data-theme="b">
-        <p>Left reveal panel.</p>
         <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
-	<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
+	</br></br>
+	<p><label for="text-basic" id="welcomeUser"></label></p>
+	<p><div class="ui-block-b"><img src="images/TV.jpg" width="150px" height="150px"></div>
     </div><!-- /panel -->
  
 </div>
@@ -67,7 +133,7 @@
 		<h2>Two</h2>
 		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
 		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
-		<p><a href="#demo-page" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
+		<p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
 
 	</div><!-- /content -->
 
@@ -75,24 +141,6 @@
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
 </div><!-- /page two -->
-
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="b">
-		<h1>Dialog</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-		<h2>Popup</h2>
-		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
-		<p><a href="#demo-page" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
 
 
 
