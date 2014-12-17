@@ -58,19 +58,31 @@
 
 	<div data-role="header">
 		<h1>My overview</h1>
-		 <a href="#leftpanel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open 
+		<!-- <a href="#leftpanel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open--> 
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<div id="container" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
 
-		<div data-role="panel" id="leftpanel" data-theme="b">
+	<div data-role="tabs" id="HistoryTab">
+	  <div data-role="navbar">
+	    <ul>
+	      <li><a href="#container" data-ajax="false">pat1</a></li>
+	      <li><a href="#container1" data-ajax="false">pat2</a></li>
+	    </ul>
+	  </div>
+
+		<div id="container" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
+	    <div id="container1" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
+	</div>
+
+   <p><a href="#one" class="ui-btn ui-shadow ui-corner-all">Enter my pattern</a></p>
+<!--		<div data-role="panel" id="leftpanel" data-theme="1">
 	        <a href="#one" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
 			</br></br>
 			<p><label for="text-basic" id="welcomeUser"></label></p>
-			<p><div class="ui-block-b"><img src="images/TV.jpg" width="150px" height="150px">
+	
 		</div>
-    </div><!-- /panel -->
+    </div>--><!-- /panel -->
 
 	</div><!-- /content -->
 
@@ -205,20 +217,19 @@
 
 	  </div>
 
-	</div>        
-	<dl>
-            <dt>Swipe <span>verb</span></dt>
-        </dl>
+	</div>    
 
-	<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
+	<p><a href="#overview" class="ui-btn ui-shadow ui-corner-all">Check my history</a></p>
 
     </div><!-- /content -->
 
-    <div data-role="panel" id="left-panel" data-theme="b">
-        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+    <div data-role="panel" id="left-panel" data-theme="b" widh="200px">
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left">Close</a>
 	</br></br>
 	<p><label for="text-basic" id="welcomeUser"></label></p>
-	<p><div class="ui-block-b"><img src="images/TV.jpg" width="150px" height="150px"></div>
+	<div class="ui-block-b" width="150px" height="150px"><img src="images/TV.jpg" width="200px" height="200px">
+	 <div><a href="#overview" class="ui-btn ui-shadow ui-corner-all">History</a></div>
+		</div>   
     </div><!-- /panel -->
 
 </div>
@@ -242,8 +253,6 @@
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
 </div><!-- /page two -->
-
-
 
 </body>
 </html>   
