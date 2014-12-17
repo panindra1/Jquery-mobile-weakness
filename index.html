@@ -12,6 +12,8 @@
 	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 </head>
 
 <body>
@@ -40,7 +42,7 @@
   	<div class="ui-grid-a">
 	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/Exercise.jpg"></a> Excersise</div>
            
-	    <div class="ui-block-b"><a href="#one" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"></a> TV</div>
+	    <div class="ui-block-b"><a href="#overview" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"></a> TV</div>
 	</div>
 
 	<div class="ui-grid-a">
@@ -50,66 +52,165 @@
 </div>
 </div>
 
+<!--overview page -->
+
+<div data-role="page" id="overview" data-theme="a">
+
+	<div data-role="header">
+		<h1>My overview</h1>
+		 <a href="#leftpanel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open 
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<div id="container" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
+
+		<div data-role="panel" id="leftpanel" data-theme="b">
+	        <a href="#one" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+			</br></br>
+			<p><label for="text-basic" id="welcomeUser"></label></p>
+			<p><div class="ui-block-b"><img src="images/TV.jpg" width="150px" height="150px">
+		</div>
+    </div><!-- /panel -->
+
+	</div><!-- /content -->
+
+
+</div><!-- /page two -->
+
+
+
     <!-- Start of first page: #one -->
 <div data-url="demo-page" data-role="page" id="one">
     <div data-role="header" data-theme="b">
-        <h1>Swipe left or right</h1>
+        <h1>Enter my schedule</h1>
      
         <a href="#left-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
 	
-<div data-role="tabs" id="tabs">
-  <div data-role="navbar">
-    <ul>
-      <li><a href="#Mon" data-ajax="false">M</a></li>
-      <li><a href="#Tue" data-ajax="false">Tu</a></li>
-      <li><a href="#Wed" data-ajax="false">W</a></li>
-      <li><a href="#Thu" data-ajax="false">T</a></li>
-      <li><a href="#Fri" data-ajax="false">F</a></li>
-      <li><a href="#Sat" data-ajax="false">S</a></li>
-    </ul>
-  </div>
+	<div data-role="tabs" id="tabs">
+	  <div data-role="navbar">
+	    <ul>
+	      <li><a href="#Mon" data-ajax="false">M</a></li>
+	      <li><a href="#Tue" data-ajax="false">Tu</a></li>
+	      <li><a href="#Wed" data-ajax="false">W</a></li>
+	      <li><a href="#Thu" data-ajax="false">T</a></li>
+	      <li><a href="#Fri" data-ajax="false">F</a></li>
+	    </ul>
+	  </div>
 
-  <div id="Mon" class="ui-body-d ui-content">
-    <h1>First tab contents</h1>
-  </div>
-  <div id="Tue">
-    <ul data-role="listview" data-inset="true">
-        <li><a href="#">Acura</a></li>
-        <li><a href="#">Audi</a></li>
-        <li><a href="#">BMW</a></li>
-        <li><a href="#">Cadillac</a></li>
-        <li><a href="#">Ferrari</a></li>
-    </ul>
-  </div>
+	  <div id="Mon" class="ui-body-d ui-content">
+	    <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="MidealTime" value="" type="text">
+	    </div>
 
-  <div id="Wed" class="ui-body-d ui-content">
-    <h1>First tab contents</h1>
-  </div>
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="MstudiedTime" value="" type="text">
+	    </div>
 
-   <div id="Thu" class="ui-body-d ui-content">
-    <h1>First tab contents</h1>
-  </div>
 
-   <div id="Fri" class="ui-body-d ui-content">
-    <h1>First tab contents</h1>
-  </div>
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="MwasteTime" value="" type="text">
+	    </div>
 
- <div id="Sat" class="ui-body-d ui-content">
-    <h1>First tab contents</h1>
-  </div>
+	    <button id="MBtn" class="ui-btn">Enter My time</button>
 
-</div>        
+	  </div>
+	
+	  <div id="Tue">
+	    <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="TuidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="TustudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="TuwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="TuBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	  <div id="Wed" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="WidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="WstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="WwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="WBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	   <div id="Thu" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="TidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="TstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="TwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="TBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	   <div id="Fri" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="FidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="FstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="FwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="FBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	</div>        
 	<dl>
             <dt>Swipe <span>verb</span></dt>
         </dl>
 
 	<p><a href="#two" class="ui-btn ui-shadow ui-corner-all">Show page "two"</a></p>
-
-	
-
 
     </div><!-- /content -->
 
@@ -119,7 +220,7 @@
 	<p><label for="text-basic" id="welcomeUser"></label></p>
 	<p><div class="ui-block-b"><img src="images/TV.jpg" width="150px" height="150px"></div>
     </div><!-- /panel -->
- 
+
 </div>
 
     <!-- Start of second page: #two -->
