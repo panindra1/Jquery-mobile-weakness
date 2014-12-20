@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+</head>
+
+<body>
+<!----welcome page -->
+<div data-url="welcome-page" data-role="page" id="welcome-page">
+
+	<div data-role="header">
+		<h1>Welcome</h1>
+	</div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <label for="text-basic">Welcome to weakness Analyzer!</label>
+	<label for="text-basic">Enter you Name:</label>
+	<input name="text-basic" id="test-input" value="" type="text"></div>
+	<a href="#grid-page" class="ui-shadow ui-btn ui-corner-all">Enter!</a>
+    </div>
+
+<!--- grid page -->
+
+<div data-url="grid-page" data-role="page" id="grid-page">
+
+	<div data-role="header">
+		<h1>Select weakness</h1>
+	</div><!-- /header -->
+    <div role="main" class="ui-content">
+  	<div class="ui-grid-a">
+	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/Exercise.jpg"></a> Excersise</div>
+           
+	    <div class="ui-block-b"><a href="#overview" class="ui-shadow ui-btn ui-corner-all"><img src="images/TV.jpg"></a> TV</div>
+	</div>
+
+	<div class="ui-grid-a">
+	    <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/procastination.jpg"></a>Procrastination</div>
+	    <div class="ui-block-b"><a href="#" class="ui-shadow ui-btn ui-corner-all"><img src="images/pessimism.jpg"></a> Pessimism</div>
+	</div>
+</div>
+</div>
+
+<!--overview page -->
+
+<div data-role="page" id="overview" data-theme="a">
+
+	<div data-role="header">
+		<h1>My overview</h1>
+		<!-- <a href="#leftpanel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open--> 
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+
+	<div data-role="tabs" id="HistoryTab">
+	  <div data-role="navbar">
+	    <ul>
+	      <li><a href="#container" data-ajax="false">pat1</a></li>
+	      <li><a href="#container1" data-ajax="false">pat2</a></li>
+	    </ul>
+	  </div>
+
+		<div id="container" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
+	    <div id="container1" style="height: 400px; width:300px; max-width: 600px; margin: 0 auto"></div>		
+	</div>
+
+   <p><a href="#one" class="ui-btn ui-shadow ui-corner-all">Enter my pattern</a></p>
+<!--		<div data-role="panel" id="leftpanel" data-theme="1">
+	        <a href="#one" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+			</br></br>
+			<p><label for="text-basic" id="welcomeUser"></label></p>
+	
+		</div>
+    </div>--><!-- /panel -->
+
+	</div><!-- /content -->
+
+
+</div><!-- /page two -->
+
+
+
+    <!-- Start of first page: #one -->
+<div data-url="demo-page" data-role="page" id="one">
+    <div data-role="header" data-theme="b">
+        <h1>Enter my schedule</h1>
+     
+        <a href="#left-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open right panel</a>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+	
+	<div data-role="tabs" id="tabs">
+	  <div data-role="navbar">
+	    <ul>
+	      <li><a href="#Mon" data-ajax="false">M</a></li>
+	      <li><a href="#Tue" data-ajax="false">Tu</a></li>
+	      <li><a href="#Wed" data-ajax="false">W</a></li>
+	      <li><a href="#Thu" data-ajax="false">T</a></li>
+	      <li><a href="#Fri" data-ajax="false">F</a></li>
+	    </ul>
+	  </div>
+
+	  <div id="Mon" class="ui-body-d ui-content">
+	    <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="MidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="MstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="MwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="MBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+	
+	  <div id="Tue">
+	    <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="TuidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="TustudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="TuwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="TuBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	  <div id="Wed" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="WidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="WstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="WwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="WBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	   <div id="Thu" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="TidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="TstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="TwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="TBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	   <div id="Fri" class="ui-body-d ui-content">
+	     <div class="ui-field-contain">
+	       <label for="timePicker1">Study Time:</label>
+               <input name="text-12" id="FidealTime" value="" type="text">
+	    </div>
+
+   	    <div class="ui-field-contain">
+	         <label for="text-12">Studied Time:</label>
+        	 <input name="text-12" id="FstudiedTime" value="" type="text">
+	    </div>
+
+
+	    <div class="ui-field-contain">
+	         <label for="text-12">Time waste source:</label>
+        	 <input name="text-12" id="FwasteTime" value="" type="text">
+	    </div>
+
+	    <button id="FBtn" class="ui-btn">Enter My time</button>
+
+	  </div>
+
+	</div>    
+
+	<p><a href="#overview" class="ui-btn ui-shadow ui-corner-all">Check my history</a></p>
+
+    </div><!-- /content -->
+
+    <div data-role="panel" id="left-panel" data-theme="b" widh="200px">
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left">Close</a>
+	</br></br>
+	<p><label for="text-basic" id="welcomeUser"></label></p>
+	<div class="ui-block-b" width="150px" height="150px"><img src="images/TV.jpg" width="200px" height="200px">
+	 <div><a href="#overview" class="ui-btn ui-shadow ui-corner-all">History</a></div>
+	 <div><a href="#" class="ui-btn ui-shadow ui-corner-all">Suggestions</a></div>
+	 <div><a href="#" class="ui-btn ui-shadow ui-corner-all">weekly Analysis</a></div>
+		</div>   
+    </div><!-- /panel -->
+
+</div>
+
+    <!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1>Two</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Two</h2>
+		<p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+		<p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+		<p><a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page "one"</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+</body>
+</html>   
+
+
